@@ -4,7 +4,7 @@ const { Book, User, Wishlist } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all of the wishlist books for the user 
-router.get('/', withAuth, (req, res) => {
+router.get('/', /*withAuth,*/ (req, res) => {
     Wishlist.findAll({
         attributes: [
             'id',
@@ -26,7 +26,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/:id', withAuth, (req, res) => {
+router.get('/:id', /*withAuth,*/ (req, res) => {
     Wishlist.findOne({
         where: {
             id: req.params.id

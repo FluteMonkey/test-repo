@@ -1,4 +1,3 @@
-
 const Wishlist = require('./Wishlist');
 const User = require('./User');
 const Book = require('./Book');
